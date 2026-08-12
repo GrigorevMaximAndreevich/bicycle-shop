@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: bicycle-shop
+  datasource:
+    url: jdbc:postgresql://localhost:5433/bicycle_shop
+    username: bicycle_user
+    password: bicycle_password
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yml
