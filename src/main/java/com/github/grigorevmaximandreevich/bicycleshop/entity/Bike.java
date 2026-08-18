@@ -59,9 +59,11 @@ public class Bike {
     private Instant updatedAt;
 
     @OneToMany(mappedBy = "bike", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<CartItem> cartItems = new ArrayList<>();
 
     @OneToMany(mappedBy = "bike", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<OrderItem> orderItems = new ArrayList<>();
 
     @PrePersist
